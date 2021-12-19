@@ -9,13 +9,26 @@ import { ServiceService } from 'src/app/shared/service.service';
   styleUrls: ['./file-list.component.css']
 })
 export class FileListComponent implements OnInit {
- @Input() fileName$!:Observable<File[]>;
+ @Input() fileName$!:Observable<any[]>;
  @Output() count: any;
 
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
-this.fileName$=this.service.getFileList();
+    this.fileName$=this.service.getFileList();
+    console.log("check file name"+this.fileName$);
   }
+  deleteClick(item:any){
+    if(confirm('Are you sure??')){
+      this.service.deleteFile(item.EmployeeId).subscribe(data=>{
+        alert(data.toString());
+        this.refreshList();
+      })
+    }
+  }
+
+
+  refreshList(){
+    this.fileName$ = this.service.getFileList()}
 
 }

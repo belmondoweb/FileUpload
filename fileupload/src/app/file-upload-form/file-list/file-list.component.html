@@ -1,13 +1,16 @@
 <div class="my-card">
-    <div class="my-circle-link">
-    </div>
-    <div class="col-3 files" *ngIf="fileName$ |async as files">
+
+
+    <div class="col-3" *ngIf="fileName$ |async as files">
         <div *ngFor="let doc of files">
-            <p class=" mt-0 "><em>{{doc.id}}</em>
+            <span class="my-circle-link"></span>
+            <p class="files"><em>{{doc.Flname}}</em>
+                <span class="my-spencer" (click)="deleteClick(doc)">+</span>
             </p>
+
         </div>
+
     </div>
-    <div class="my-spacer ">
-        click
-    </div>
+
+
 </div>

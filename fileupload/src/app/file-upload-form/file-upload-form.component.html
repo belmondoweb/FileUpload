@@ -2,27 +2,53 @@
     <app-file-list>
     </app-file-list>
 </div>
+
 <div class="card-container">
     <div class="card">
         <!-- <p class="card-container ">file-upload-form</p> -->
         <div class="d-flex flex-row justify-content-center mb-3">
 
-            <div class="form-froup row">
+            <div class="form-froup">
                 <div class="col-md-10">
-                    <input type="text" class="form-control" [(ngModel)]="fileName" placeholder="Enter File Name">
+                    <input type="text" class="form-control" [(ngModel)]="Flname" placeholder="Enter File Name">
                 </div>
-                <div class="">
-                    <input type="file" (change)="uploadFile($event)" class="mt-2" />
+                <div class="dropzone">
+                    <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                    <input type="file" (change)="uploadFile($event)" class="upload-input" />
                 </div>
+                <button (click)="addFile(Flname)" type="submit" class="btn">Upload</button>
+
             </div>
+
         </div>
+        <!-- <img [src]=Flpath height="50px;" width="40px;"> -->
 
-        <!--  *ngIf="doc.id==0" -->
-        <button (click)="addFile()" class="btn btn-success">Upload</button>
-
-
-
+        <!-- *ngIf="doc.Id==0" -->
 
     </div>
 
 </div>
+
+<!--
+<div class="form-froup row" style="width: 60%;">
+
+    <label class="col-sm-2 col-form-label">Employee Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Flname" placeholder="Enter Employee Name">
+    </div>
+
+
+
+
+
+</div>
+<div class="ml-3 bd-highlight" style="width: 40%;">
+    <img [src]=Flpath eight="50px;" width="20px;">
+    <input type="file" (change)="uploadFile($event)" class="mt-2" />
+</div>
+
+
+
+<button (click)="addFile()" class="btn btn-primary">
+  Add
+</button> -->

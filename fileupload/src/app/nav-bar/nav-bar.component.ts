@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { File } from '../shared/file';
 import { ServiceService } from '../shared/service.service';
 
 @Component({
@@ -7,12 +9,15 @@ import { ServiceService } from '../shared/service.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  @Input() count: number=0;
-
+  @Input() count$:Observable<any[]> | undefined ;
+count:any=[]
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
-
+    this.get();
+    this.count$= this.service.getFileList();
   }
-
+get(){
+  this.service.getFileList().subscribe(data=>this.count=data)
+}
 }
