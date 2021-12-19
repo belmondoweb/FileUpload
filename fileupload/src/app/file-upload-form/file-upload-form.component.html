@@ -1,1 +1,28 @@
-<p>file-upload-form works!</p>
+<div class="list">
+    <app-file-list>
+    </app-file-list>
+</div>
+<div class="card-container">
+    <div class="card">
+        <!-- <p class="card-container ">file-upload-form</p> -->
+        <div class="d-flex flex-row justify-content-center mb-3">
+
+            <div class="form-froup row">
+                <div class="col-md-10">
+                    <input type="text" class="form-control" [(ngModel)]="fileName" placeholder="Enter File Name">
+                </div>
+                <div class="">
+                    <input type="file" (change)="uploadFile($event)" class="mt-2" />
+                </div>
+            </div>
+        </div>
+
+        <!--  *ngIf="doc.id==0" -->
+        <button (click)="addFile()" class="btn btn-success">Upload</button>
+
+
+
+
+    </div>
+
+</div>

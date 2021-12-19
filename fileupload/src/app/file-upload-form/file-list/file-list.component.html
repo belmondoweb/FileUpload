@@ -1,1 +1,13 @@
-<p>file-list works!</p>
+<div class="my-card">
+    <div class="my-circle-link">
+    </div>
+    <div class="col-3 files" *ngIf="fileName$ |async as files">
+        <div *ngFor="let doc of files">
+            <p class=" mt-0 "><em>{{doc.id}}</em>
+            </p>
+        </div>
+    </div>
+    <div class="my-spacer ">
+        click
+    </div>
+</div>
