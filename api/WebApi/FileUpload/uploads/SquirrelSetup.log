@@ -1,0 +1,131 @@
+﻿2021-11-25 10:42:04> Program: Starting Squirrel Updater: --createShortcut slack.exe -l Desktop,StartMenu
+2021-11-25 10:42:04> ApplyReleasesImpl: About to create shortcuts for slack.exe, rootAppDir C:\Users\belmo\AppData\Local\slack
+2021-11-25 10:42:04> ApplyReleasesImpl: Creating shortcut for slack.exe => C:\Users\belmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Slack Technologies Inc.\Slack.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: About to save shortcut: C:\Users\belmo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Slack Technologies Inc.\Slack.lnk (target C:\Users\belmo\AppData\Local\slack\slack.exe, workingDir C:\Users\belmo\AppData\Local\slack\app-4.22.0, args , toastActivatorCSLID 9a92da87-49f2-51a4-a2b5-718444efc154)
+2021-11-25 10:42:04> ApplyReleasesImpl: Creating shortcut for slack.exe => C:\Users\belmo\Desktop\Slack.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: About to save shortcut: C:\Users\belmo\Desktop\Slack.lnk (target C:\Users\belmo\AppData\Local\slack\slack.exe, workingDir C:\Users\belmo\AppData\Local\slack\app-4.22.0, args , toastActivatorCSLID 9a92da87-49f2-51a4-a2b5-718444efc154)
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: File Explorer.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: Firefox.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: Google Chrome.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: Microsoft Edge.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: Node.js command prompt.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: Snipping Tool.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: File 'C:\Users\belmo\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Snipping Tool.lnk' could not be converted into a valid ShellLink: System.IO.FileNotFoundException: The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+   at Squirrel.Shell.ShellLink.IShellLinkW.Resolve(IntPtr hWnd, UInt32 fFlags)
+   at Squirrel.Shell.ShellLink.Open(String linkFile, IntPtr hWnd, EShellLinkResolveFlags resolveFlags, UInt16 timeOut)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<fixPinnedExecutables>b__11_0(FileInfo file)
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: Visual Studio Code.lnk
+2021-11-25 10:42:04> ApplyReleasesImpl: Examining Pin: WinRAR.lnk
+2021-12-16 13:03:24> Program: Starting Squirrel Updater: --checkForUpdate https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64
+2021-12-16 13:03:24> Program: Fetching update information, downloading from https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64
+2021-12-16 13:03:24> CheckForUpdateImpl: Generated new staging user ID: aaa3f323-1488-5bec-b10f-4d4b234e55af
+2021-12-16 13:03:24> CheckForUpdateImpl: Downloading RELEASES file from https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64
+2021-12-16 13:03:24> FileDownloader: Downloading url: https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64/RELEASES?id=slack&localVersion=4.22.0&arch=amd64
+2021-12-16 13:03:25> UpdateInfo: Couldn't get release notes for:slack-4.23.0-delta.nupkg: System.IO.FileNotFoundException: Could not find file 'C:\Users\belmo\AppData\Local\slack\packages\slack-4.23.0-delta.nupkg'.
+File name: 'C:\Users\belmo\AppData\Local\slack\packages\slack-4.23.0-delta.nupkg'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   at NuGet.ZipPackage.EnsureManifest()
+   at NuGet.ZipPackage..ctor(String filePath, Boolean enableCaching)
+   at Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   at Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+2021-12-16 13:03:25> Program: Starting Squirrel Updater: --update https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64
+2021-12-16 13:03:25> Program: Starting update, downloading from https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64
+2021-12-16 13:03:25> Program: About to update to: C:\Users\belmo\AppData\Local\slack
+2021-12-16 13:03:25> CheckForUpdateImpl: Using existing staging user ID: aaa3f323-1488-5bec-b10f-4d4b234e55af
+2021-12-16 13:03:25> CheckForUpdateImpl: Downloading RELEASES file from https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64
+2021-12-16 13:03:25> FileDownloader: Downloading url: https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64/RELEASES?id=slack&localVersion=4.22.0&arch=amd64
+2021-12-16 13:03:26> FileDownloader: Downloading file: https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64/slack-4.23.0-delta.nupkg
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-console-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-datetime-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-debug-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-errorhandling-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-file-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-file-l1-2-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-file-l2-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-handle-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-heap-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-interlocked-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-libraryloader-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-localization-l1-2-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-memory-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-namedpipe-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-processenvironment-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-processthreads-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-processthreads-l1-1-1.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-profile-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-rtlsupport-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-string-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-synch-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-synch-l1-2-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-sysinfo-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-timezone-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-core-util-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-conio-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-convert-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-environment-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-filesystem-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-heap-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-locale-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-math-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-multibyte-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-private-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-process-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-runtime-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-stdio-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-string-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-time-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: lib\net45\api-ms-win-crt-utility-l1-1-0.dll.diff exists unchanged, skipping
+2021-12-16 13:03:37> DeltaPackageBuilder: Applying MSDiff to lib\net45\chrome_100_percent.pak.diff
+2021-12-16 13:03:37> Program: Failed to apply updates, falling back to full updates: System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at DeltaCompressionDotNet.MsDelta.MsDeltaCompression.ApplyDelta(String deltaFilePath, String oldFilePath, String newFilePath)
+   at Squirrel.DeltaPackageBuilder.applyDiffToFile(String deltaPath, String relativeFilePath, String workingDirectory)
+   at Squirrel.DeltaPackageBuilder.<>c__DisplayClass3_1.<ApplyDeltaPackage>b__4(String file)
+   at Squirrel.EnumerableExtensions.ForEach[TSource](IEnumerable`1 source, Action`1 onNext)
+   at Squirrel.DeltaPackageBuilder.ApplyDeltaPackage(ReleasePackage basePackage, ReleasePackage deltaPackage, String outputFile)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass8_0.<createFullPackagesFromDeltas>b__3()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<createFullPackagesFromDeltas>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<ApplyReleases>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.UpdateManager.<ApplyReleases>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Squirrel.Update.Program.<Update>d__5.MoveNext()
+2021-12-16 13:03:37> CheckForUpdateImpl: Using existing staging user ID: aaa3f323-1488-5bec-b10f-4d4b234e55af
+2021-12-16 13:03:37> CheckForUpdateImpl: Downloading RELEASES file from https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64
+2021-12-16 13:03:37> FileDownloader: Downloading url: https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64/RELEASES?id=slack&localVersion=4.22.0&arch=amd64
+2021-12-16 13:03:37> FileDownloader: Downloading file: https://slack.com/desktop/update/v2/releases/windows/4.23.0/prod/x64/slack-4.23.0-full.nupkg
+2021-12-16 13:03:46> ApplyReleasesImpl: Writing files to app directory: C:\Users\belmo\AppData\Local\slack\app-4.23.0
+2021-12-16 13:03:48> LogHost: Rigging execution stub for lib/net45/slack_ExecutionStub.exe to C:\Users\belmo\AppData\Local\slack\slack.exe
+2021-12-16 13:03:49> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\belmo\AppData\Local\slack\app-4.23.0\slack.exe]
+2021-12-16 13:03:50> ApplyReleasesImpl: Starting fixPinnedExecutables
+2021-12-16 13:03:50> ApplyReleasesImpl: Examining Pin: File Explorer.lnk
+2021-12-16 13:03:50> ApplyReleasesImpl: Examining Pin: Firefox.lnk
+2021-12-16 13:03:50> ApplyReleasesImpl: Examining Pin: Microsoft Edge.lnk
+2021-12-16 13:03:50> ApplyReleasesImpl: Examining Pin: Snipping Tool.lnk
+2021-12-16 13:03:50> ApplyReleasesImpl: File 'C:\Users\belmo\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Snipping Tool.lnk' could not be converted into a valid ShellLink: System.IO.FileNotFoundException: The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+   at Squirrel.Shell.ShellLink.IShellLinkW.Resolve(IntPtr hWnd, UInt32 fFlags)
+   at Squirrel.Shell.ShellLink.Open(String linkFile, IntPtr hWnd, EShellLinkResolveFlags resolveFlags, UInt16 timeOut)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<fixPinnedExecutables>b__11_0(FileInfo file)
+2021-12-16 13:03:50> ApplyReleasesImpl: Fixing up tray icons
+2021-12-16 13:03:50> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__13_0(RegistryView view)
+2021-12-16 13:03:50> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__13_0(RegistryView view)
+2021-12-16 13:03:50> ApplyReleasesImpl: cleanDeadVersions: for version 4.23.0
+2021-12-16 13:03:50> ApplyReleasesImpl: cleanDeadVersions: exclude folder app-4.22.0
+2021-12-16 13:03:50> ApplyReleasesImpl: cleanDeadVersions: exclude folder app-4.23.0

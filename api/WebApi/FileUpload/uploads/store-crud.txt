@@ -1,0 +1,99 @@
+ {
+     "creditCard": [{
+         "paymentDetailId": 1,
+         "cardOwnerName": "Visa",
+         "cardNumber": 407512341234,
+
+         "expirationDate": "02 / 25 / 2026",
+         "securityCode": "234"
+
+     }, {
+         "paymentDetailId": 2,
+         "cardOwnerName": "Visa",
+         "cardNumber": 407512341233,
+
+         "expirationDate": "02 / 23 / 2023",
+         "securityCode": "234"
+
+     }, {
+         "paymentDetailId": 3,
+         "cardOwnerName": "Visa",
+         "cardNumber": 407512341444,
+
+         "expirationDate": "02 / 24 / 2024",
+         "securityCode": "234"
+
+     }]
+ }
+ng g m card-list --route=card-list --module=app-routing
+npm i json-server
+ json-server --watch ./src/app/data.json
+
+
+
+
+● src
++---● app
+|   +--● cradit-card-list
+|   |  |--cradit-card-list.component.ts|.html
+|   |  |
+|   |  +--● cradit-card-details
+|   |  |  |--cradit-card-details.component.ts|.html
+|   |  
+|   |
+|   |
+|   +--● shared
+|   |  |--payment-api.service.ts
+|   |  |--payment.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)
+
+
+
+● src
++---● app
+|   +--● cradit-card-list
+|   |  |--product-list.component.ts|.html
+|   |  |
+|   |  +--● product
+|   |  |  |--product-form.component.ts|.html
+|   |  |  |--product-form.component.ts
+|   |  |-products.module.ts
+|   |  |-products-routing.module.ts
+|      |-produc-search.pipe.ts
+|      |
+|   +--● services 
+|   |  |--products.service.ts
+|   |  |--product.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)
+
+
+export class IProduct {
+  id?: number;
+  Name:string='';
+  Description: string='';
+  Price: number=0;
+
+}
+
+
+export interface Payment   {
+    id: number ;
+    name: string;
+    number: string;
+    expirationDate: string ;
+    securityCode: string;
+}
+
+npm i bootstrap
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+
+
