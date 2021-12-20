@@ -9,17 +9,28 @@ import { ServiceService } from '../shared/service.service';
   styleUrls: ['./file-upload-form.component.css']
 })
 export class FileUploadFormComponent implements OnInit {
-  @Input() doc!: File;
-  Id:string|any;
+  @Input() doc:File|any;
+  Id:any;
   Flname:string | any;
   Flpath:string |any;
-
+  List:any=[];
 
   getFiles!: Observable<any[]>;
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
-    this.refreshList();
+    this.loadList();
+    // this.refreshList()
+  }
+
+
+  loadList(){
+    this.service.getFileList().subscribe((data:any)=>{
+      this.List=data;
+
+      // this.Id=this.doc.Id;
+      this.Flpath=this.service.fileUrl+this.Flname;
+    });
   }
   uploadFile(event:any){
     var file=event.target.files[0];
@@ -44,6 +55,13 @@ export class FileUploadFormComponent implements OnInit {
     this.getFiles = this.service.getFileList()}
 
 
+    addNewFile(){
+      var val = {Id:this.Id, Flname:this.Flname};
+
+      this.service.addFile(val).subscribe(res=>{
+        alert(res.toString());
+      });
+    }
 
  }
 

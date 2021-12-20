@@ -10,8 +10,9 @@ import { ServiceService } from 'src/app/shared/service.service';
 })
 export class FileListComponent implements OnInit {
  @Input() fileName$!:Observable<any[]>;
- @Output() count: any;
-
+ ActivateEditComp:boolean=false;
+ ModalTitle:string | undefined;
+doc:any;
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
@@ -20,13 +21,29 @@ export class FileListComponent implements OnInit {
   }
   deleteClick(item:any){
     if(confirm('Are you sure??')){
-      this.service.deleteFile(item.EmployeeId).subscribe(data=>{
+      this.service.deleteFile(item).subscribe(data=>{
         alert(data.toString());
         this.refreshList();
       })
     }
   }
+  addClick(){
+    this.doc={Id:0, Flname:"anonymous.png" }
+    this.ModalTitle="Add Employee";
+    this.ActivateEditComp=true;
 
+  }
+
+  editClick(item:any){
+    console.log(item);
+    this.doc=item;
+    this.ModalTitle="Edit List";
+    this.ActivateEditComp=true;
+  }
+  closeClick(){
+    this.ActivateEditComp=false;
+    this.refreshList();
+  }
 
   refreshList(){
     this.fileName$ = this.service.getFileList()}

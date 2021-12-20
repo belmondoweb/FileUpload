@@ -19,12 +19,12 @@ getFileList():Observable<File[]>{
     return this.http.post(this.APIUrl+'/PostFile/SaveFile',val);
   }
   addFile(file:any):Observable<any>{
-    return this.http.post<any>(this.fileUrl, file)
+    return this.http.post<any>(this.APIUrl+'/PostFile', file)
 
   }
 
   deleteFile(val:any){
-    return this.http.delete(this.APIUrl+'/PostFile'+ val)
+    return this.http.delete(this.APIUrl+'/PostFile/'+ val)
   }
 }
 

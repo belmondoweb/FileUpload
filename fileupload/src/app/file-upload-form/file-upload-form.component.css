@@ -38,6 +38,7 @@
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
+    margin-bottom: 10%;
 }
 
 .card-container .card:not(:last-child) {
@@ -91,6 +92,8 @@
     box-shadow: 0 3px 0 0 hotpink;
     transition: all 0.3s ease-in-out;
     font-size: 14px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -104,7 +107,7 @@
     border: 1px dashed #999;
     border-radius: 3px;
     text-align: center;
-    margin: 20px;
+    margin: 0 auto;
 }
 
 .upload-icon {
@@ -119,4 +122,9 @@
     margin: 20px;
     height: 100%;
     opacity: 0;
+}
+
+input.form-control {
+    width: 400px;
+    margin: 20px;
 }
